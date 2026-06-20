@@ -21,7 +21,8 @@ app = FastAPI(title="Eventum Engine Framework")
 # Cryptographic token payload signing configurations
 SECRET_KEY = "SUPER_SECRET_SECURITY_KEY_KEEP_THIS_HIDDEN" 
 ALGORITHM = "HS256"
-pwd_context = CryptContext(schemes=["bcrypt"], bcrypt__deprecated_minus_level=0)
+# PASTE THIS LINE INSTEAD:
+pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="login")
 
 # Mount cross-origin middleware to grant port 5173 continuous transaction access

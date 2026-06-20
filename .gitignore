@@ -1,6 +1,15 @@
-node_modules/
-venv/
-__pycache__/
-.env
-*.db
+# Frontend build files and packages
+frontend/node_modules/
+frontend/dist/
+
+# Backend database files and environment keys
+backend/database.db
+backend/.env
 .DS_Store
+
+# Loose Python Virtual Environment Files
+backend/bin/
+backend/include/
+backend/lib/
+backend/pyvenv.cfg
+backend/__pycache__/
