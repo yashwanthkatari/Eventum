@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite';
-import react from '@pluginjs/vite-plugin-react'; // Installs the native React compilation layer
+import react from '@vitejs/plugin-react'; // Fixed the corrupted package name here
 
 // Exporting Vite configurations to control asset builds and hot-reload development servers
 export default defineConfig({
