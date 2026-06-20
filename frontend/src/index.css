@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Smooth global layout initialization fade transition */
+.animate-fade {
+  animation: componentFadeIn 0.25s ease-out forwards;
+}
+
+@keyframes componentFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Structural micro-drawer mechanic tracking custom categories */
+.category-input-enter {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.2s cubic-bezier(0, 1, 0, 1), opacity 0.15s ease-in-out;
+}
+
+/* Auto expanding visibility rules triggered via conditional role hooks */
+.category-input-enter.active {
+  max-height: 200px;
+  opacity: 1;
+  margin-top: 0.75rem;
+  transition: max-height 0.25s ease-in-out, opacity 0.2s ease-in-out;
+}
